@@ -9,10 +9,10 @@ import java.util.List;
 @Service
 public class ProductService {
     private final List<Product> products = new ArrayList<>();
-    private long nextID = 1;
+    private long nextId = 1;
 
     public Product addProduct(Product product) {
-        product.setId(nextID++);
+        product.setId(nextId++);
         products.add(product);
         return product;
     }
