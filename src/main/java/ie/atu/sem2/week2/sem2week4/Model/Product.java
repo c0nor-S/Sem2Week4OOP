@@ -14,9 +14,21 @@ public class Product {
     @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private Long id;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @NotBlank(message = "Product Name Is Required.")
     private String name;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Positive(message = "Price Must Be Greater Than Zero.")
     private double price;
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
